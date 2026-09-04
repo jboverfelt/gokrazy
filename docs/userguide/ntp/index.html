@@ -5,30 +5,30 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.163.3">
     <meta name="generator" content="Relearn 8.2.0+220806ce3ced8264fbdd693f77f28216a8a1b6ae">
-    <meta name="description" content="Since March 2022, gokrazy supports both encrypted and unencrypted WiFi networks! 🎉
-Step 1. Install the wifi package To make gokrazy connect to a WiFi network, first add the github.com/gokrazy/wifi package to your gokrazy instance:
-gok add github.com/gokrazy/wifi Step 2. Configure the wifi package Open your gokrazy instance’s config.json in your editor:">
+    <meta name="description" content="Each gokrazy instance comes with a built-in NTP client (see Instance Config → GokrazyPackages for more details on system packages) which sets the system clock once the network is up.
+NTP servers The NTP client determines which servers to query in the following order:
+Servers specified on the command line, if any NTP servers provided by the network’s DHCP server, if any The default *.gokrazy.pool.ntp.org server pool If your DHCP server is configured to provide NTP servers (DHCP option 42), they are used automatically — no configuration required. If they cannot be reached, the default pool is used temporarily.">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Connecting to WiFi networks :: gokrazy">
-    <meta name="twitter:description" content="Since March 2022, gokrazy supports both encrypted and unencrypted WiFi networks! 🎉
-Step 1. Install the wifi package To make gokrazy connect to a WiFi network, first add the github.com/gokrazy/wifi package to your gokrazy instance:
-gok add github.com/gokrazy/wifi Step 2. Configure the wifi package Open your gokrazy instance’s config.json in your editor:">
-    <meta property="og:url" content="https://gokrazy.org/userguide/wifi/index.html">
+    <meta name="twitter:title" content="NTP Client :: gokrazy">
+    <meta name="twitter:description" content="Each gokrazy instance comes with a built-in NTP client (see Instance Config → GokrazyPackages for more details on system packages) which sets the system clock once the network is up.
+NTP servers The NTP client determines which servers to query in the following order:
+Servers specified on the command line, if any NTP servers provided by the network’s DHCP server, if any The default *.gokrazy.pool.ntp.org server pool If your DHCP server is configured to provide NTP servers (DHCP option 42), they are used automatically — no configuration required. If they cannot be reached, the default pool is used temporarily.">
+    <meta property="og:url" content="https://gokrazy.org/userguide/ntp/index.html">
     <meta property="og:site_name" content="gokrazy">
-    <meta property="og:title" content="Connecting to WiFi networks :: gokrazy">
-    <meta property="og:description" content="Since March 2022, gokrazy supports both encrypted and unencrypted WiFi networks! 🎉
-Step 1. Install the wifi package To make gokrazy connect to a WiFi network, first add the github.com/gokrazy/wifi package to your gokrazy instance:
-gok add github.com/gokrazy/wifi Step 2. Configure the wifi package Open your gokrazy instance’s config.json in your editor:">
+    <meta property="og:title" content="NTP Client :: gokrazy">
+    <meta property="og:description" content="Each gokrazy instance comes with a built-in NTP client (see Instance Config → GokrazyPackages for more details on system packages) which sets the system clock once the network is up.
+NTP servers The NTP client determines which servers to query in the following order:
+Servers specified on the command line, if any NTP servers provided by the network’s DHCP server, if any The default *.gokrazy.pool.ntp.org server pool If your DHCP server is configured to provide NTP servers (DHCP option 42), they are used automatically — no configuration required. If they cannot be reached, the default pool is used temporarily.">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="article">
     <meta property="article:section" content="Configuration">
-    <meta itemprop="name" content="Connecting to WiFi networks :: gokrazy">
-    <meta itemprop="description" content="Since March 2022, gokrazy supports both encrypted and unencrypted WiFi networks! 🎉
-Step 1. Install the wifi package To make gokrazy connect to a WiFi network, first add the github.com/gokrazy/wifi package to your gokrazy instance:
-gok add github.com/gokrazy/wifi Step 2. Configure the wifi package Open your gokrazy instance’s config.json in your editor:">
-    <meta itemprop="wordCount" content="210">
-    <title>Connecting to WiFi networks :: gokrazy</title>
+    <meta itemprop="name" content="NTP Client :: gokrazy">
+    <meta itemprop="description" content="Each gokrazy instance comes with a built-in NTP client (see Instance Config → GokrazyPackages for more details on system packages) which sets the system clock once the network is up.
+NTP servers The NTP client determines which servers to query in the following order:
+Servers specified on the command line, if any NTP servers provided by the network’s DHCP server, if any The default *.gokrazy.pool.ntp.org server pool If your DHCP server is configured to provide NTP servers (DHCP option 42), they are used automatically — no configuration required. If they cannot be reached, the default pool is used temporarily.">
+    <meta itemprop="wordCount" content="196">
+    <title>NTP Client :: gokrazy</title>
     <link href="/images/favicon.png?1788547941" rel="icon" type="image/png">
     <link href="/css/auto-complete/auto-complete.min.css?1788547941" rel="stylesheet">
     <script src="/js/auto-complete/auto-complete.min.js?1788547941" defer></script>
@@ -54,7 +54,7 @@ gok add github.com/gokrazy/wifi Step 2. Configure the wifi package Open your gok
       window.relearn = window.relearn || {};
       // configuration
       window.relearn.min = `.min`;
-      window.relearn.path='\/userguide\/wifi\/index.html';
+      window.relearn.path='\/userguide\/ntp\/index.html';
       window.relearn.relBasePath='..\/..';
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='https:\/\/gokrazy.org';
@@ -102,7 +102,7 @@ gok add github.com/gokrazy/wifi Step 2. Configure the wifi package Open your gok
       window.relearn.markVariant();
     </script>
   </head>
-  <body class="mobile-support html" data-url="/userguide/wifi/index.html">
+  <body class="mobile-support html" data-url="/userguide/ntp/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -118,20 +118,19 @@ gok add github.com/gokrazy/wifi Step 2. Configure the wifi package Open your gok
                 <div class="topbar-content-wrapper">
 <nav class="TableOfContents">
   <ul>
-    <li><a href="#step-1-install-the-wifi-package">Step 1. Install the wifi package</a></li>
-    <li><a href="#step-2-configure-the-wifi-package">Step 2. Configure the wifi package</a></li>
-    <li><a href="#for-debugging-known-working-wifi-router-setup">For debugging: known-working WiFi router setup</a></li>
+    <li><a href="#ntp-servers">NTP servers</a></li>
+    <li><a href="#real-time-clock">Real-time clock</a></li>
   </ul>
 </nav>
                 </div>
               </div>
             </div>
           </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">gokrazy Go appliances</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/userguide/index.html"><span itemprop="name">Configuration</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Connecting to WiFi networks</span><meta itemprop="position" content="3"></li>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">gokrazy Go appliances</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/userguide/index.html"><span itemprop="name">Configuration</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">NTP Client</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><a href="https://github.com/gokrazy/gokrazy/tree/master/website/content/userguide/wifi.md" rel="external" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a></span>
+<span class="btn cstyle button link noborder notitle interactive"><a href="https://github.com/gokrazy/gokrazy/tree/master/website/content/userguide/ntp.md" rel="external" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
 <span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
@@ -152,59 +151,49 @@ gok add github.com/gokrazy/wifi Step 2. Configure the wifi package Open your gok
   <header class="headline">
   </header>
 
-<h1 id="connecting-to-wifi-networks">Connecting to WiFi networks</h1>
+<h1 id="ntp-client">NTP Client</h1>
 
-<p>Since March 2022, gokrazy supports both encrypted and unencrypted WiFi networks!
-🎉</p>
-<h2 id="step-1-install-the-wifi-package">Step 1. Install the wifi package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<p>To make gokrazy connect to a WiFi network, first add the
-<code>github.com/gokrazy/wifi</code> package to your gokrazy instance:</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gok add github.com/gokrazy/wifi</span></span></code></pre></div>
-<h2 id="step-2-configure-the-wifi-package">Step 2. Configure the wifi package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<p>Open your gokrazy instance’s <code>config.json</code> in your editor:</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gok edit</span></span></code></pre></div>
-<p>Then, configure the <code>wifi</code> program by creating the file <code>wifi.json</code> as <a href="/userguide/package-config/index.html#extrafiles">extra
-file</a>.</p>
+<p>Each gokrazy instance comes with a built-in NTP client (see <a href="/userguide/instance-config/index.html#gokrazypackages">Instance Config →
+GokrazyPackages</a> for more details
+on system packages) which sets the system clock once the network is up.</p>
+<h2 id="ntp-servers">NTP servers<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The NTP client determines which servers to query in the following order:</p>
+<ol>
+<li>Servers specified on the <a href="/userguide/package-config/index.html#flags">command line</a>,
+if any</li>
+<li>NTP servers provided by the network’s DHCP server, if any</li>
+<li>The default <code>*.gokrazy.pool.ntp.org</code> server pool</li>
+</ol>
+<p>If your DHCP server is configured to provide NTP servers (DHCP option 42),
+they are used automatically — no configuration required. If they cannot be
+reached, the default pool is used temporarily.</p>
+<p>To use your own NTP servers instead, specify them as positional <a href="/userguide/package-config/index.html">command-line
+flags</a>:</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;display:grid;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Hostname&#34;</span>: <span style="color:#e6db74">&#34;wifi&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Hostname&#34;</span>: <span style="color:#e6db74">&#34;dynamic&#34;</span>,
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Packages&#34;</span>: [
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;github.com/gokrazy/fbstatus&#34;</span>,
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;github.com/gokrazy/hello&#34;</span>,
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;github.com/gokrazy/serial-busybox&#34;</span>,
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;github.com/gokrazy/breakglass&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;github.com/gokrazy/wifi&#34;</span>
 </span></span><span style="display:flex;"><span>    ],
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;PackageConfig&#34;</span>: {
-</span></span><span style="display:flex; background-color:#3c3d38"><span>        <span style="color:#f92672">&#34;github.com/gokrazy/wifi&#34;</span>: {
-</span></span><span style="display:flex; background-color:#3c3d38"><span>            <span style="color:#f92672">&#34;ExtraFilePaths&#34;</span>: {
-</span></span><span style="display:flex; background-color:#3c3d38"><span>                <span style="color:#f92672">&#34;/etc/wifi.json&#34;</span>: <span style="color:#e6db74">&#34;wifi.json&#34;</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>            }
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">&#34;PackageConfig&#34;</span>: {
+</span></span><span style="display:flex; background-color:#3c3d38"><span>        <span style="color:#f92672">&#34;github.com/gokrazy/gokrazy/cmd/ntp&#34;</span>: {
+</span></span><span style="display:flex; background-color:#3c3d38"><span>            <span style="color:#f92672">&#34;CommandLineFlags&#34;</span>: [
+</span></span><span style="display:flex; background-color:#3c3d38"><span>                <span style="color:#e6db74">&#34;ntp.example.org&#34;</span>,
+</span></span><span style="display:flex; background-color:#3c3d38"><span>                <span style="color:#e6db74">&#34;192.168.178.1&#34;</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>            ]
 </span></span><span style="display:flex; background-color:#3c3d38"><span>        }
 </span></span><span style="display:flex; background-color:#3c3d38"><span>    }
-</span></span><span style="display:flex; background-color:#3c3d38"><span>}</span></span></code></pre></div>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 
-<p>In the same directory, create <code>wifi.json</code> like so for an encrypted WiFi network:</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;ssid&#34;</span>: <span style="color:#e6db74">&#34;Secure WiFi&#34;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;psk&#34;</span>: <span style="color:#e6db74">&#34;secret&#34;</span>
-</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
-<p>If you need to connect to an <em>unencrypted</em> WiFi network, specify no psk, and <a href="/userguide/tls-for-untrusted-networks/index.html">use
-TLS</a>:</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;ssid&#34;</span>: <span style="color:#e6db74">&#34;My unencrypted WiFi&#34;</span>
-</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
-<p>Alternatively, you can also create the <code>wifi.json</code> manually on the permanent
-data partition with path <code>/perm/wifi.json</code>.</p>
-<p>After starting gokrazy, the <code>wifi</code> program will connect to the configured WiFi network:</p>
-<p><a href="/img/2020-05-27-gokrazy-wifi-unencrypted.jpg"><img src="/img/2020-05-27-gokrazy-wifi-unencrypted.thumb.jpg" srcset="/img/2020-05-27-gokrazy-wifi-unencrypted.thumb.2x.jpg 2x,/img/2020-05-27-gokrazy-wifi-unencrypted.thumb.3x.jpg 3x" width="700" style="border: 1px solid grey; margin-bottom: 2em; margin-top: 1em"></a></p>
-<h2 id="for-debugging-known-working-wifi-router-setup">For debugging: known-working WiFi router setup<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<p>In case you have trouble getting your Raspberry Pi to connect to your network,
-this is how I set up my <a href="https://openwrt.org/toh/tp-link/tl-wdr4300" rel="external">TP-LINK
-TL-WDR4300</a> with <a href="https://openwrt.org/" rel="external">OpenWrt
-19.07</a>:</p>
-<p><a href="/img/iotee.jpg"><img src="/img/iotee.thumb.jpg" srcset="/img/iotee.thumb.2x.jpg 2x,/img/iotee.thumb.3x.jpg 3x" width="700" style="border: 1px solid grey; margin-bottom: 2em; margin-top: 1em"></a></p>
-<p>The MAC address filter isn’t a security measure, but prevents others from
-accidentally joining this open network.</p>
+<h2 id="real-time-clock">Real-time clock<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>If your device has a real-time clock (RTC), the NTP client keeps it updated, so
+that the correct time is available directly after a reboot. Devices without an
+RTC start with an approximately correct clock restored from the last shutdown
+until the network is up. This requires a writable
+<a href="/userguide/permanent-data/index.html">perm partition</a>, where the time of the last
+shutdown is stored.</p>
 
   <footer class="footline">
   </footer>
@@ -259,9 +248,9 @@ accidentally joining this open network.</p>
             <li class="" data-nav-url="/userguide/automation/index.html"><a class="padding" href="/userguide/automation/index.html">Automation</a></li>
             <li class="" data-nav-url="/userguide/package-config/index.html"><a class="padding" href="/userguide/package-config/index.html">Package config: flags, environment variables, extra files</a></li>
             <li class="" data-nav-url="/userguide/dhcp/index.html"><a class="padding" href="/userguide/dhcp/index.html">DHCP Client</a></li>
-            <li class="" data-nav-url="/userguide/ntp/index.html"><a class="padding" href="/userguide/ntp/index.html">NTP Client</a></li>
+            <li class="active " data-nav-url="/userguide/ntp/index.html"><a class="padding" href="/userguide/ntp/index.html">NTP Client</a></li>
             <li class="" data-nav-url="/userguide/remotesyslog/index.html"><a class="padding" href="/userguide/remotesyslog/index.html">Remote Syslog: sending gokrazy logs over the network</a></li>
-            <li class="active " data-nav-url="/userguide/wifi/index.html"><a class="padding" href="/userguide/wifi/index.html">Connecting to WiFi networks</a></li>
+            <li class="" data-nav-url="/userguide/wifi/index.html"><a class="padding" href="/userguide/wifi/index.html">Connecting to WiFi networks</a></li>
             <li class="" data-nav-url="/userguide/tls-for-untrusted-networks/index.html"><a class="padding" href="/userguide/tls-for-untrusted-networks/index.html">Using TLS in untrusted networks</a></li>
             <li class="" data-nav-url="/userguide/bluetooth/index.html"><a class="padding" href="/userguide/bluetooth/index.html">Using Bluetooth</a></li>
             <li class="" data-nav-url="/userguide/permanent-data/index.html"><a class="padding" href="/userguide/permanent-data/index.html">Access permanent data</a></li>
